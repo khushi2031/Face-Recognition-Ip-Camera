@@ -1,10 +1,13 @@
-# Face Recognition using Haar-Cascade Classifier, OpenCV, and Python
-Simple Face Recognition algorithm using Python and OpenCV
+# Face Recognition using Haar-Cascade Classifier, OpenCV, and Python and an Ip Camera
 
 ## Requirement
 - Python 3.5
 - OpenCV 3.1.0
 - Numpy
+- Ip Camera (I'm using the android app "IP Sebcam")
+
+##Install OpenCV 3.1 on Ubuntu Pyton 3.4+
+pip install opencv-contrib-python
 
 ## Outline
 This project consist of 3 parts, which are:
@@ -13,7 +16,7 @@ This project consist of 3 parts, which are:
 3. Face Recognition (face_recognition.py)
 
 ## How to run ?
-1. Please make sure that you have folders called 'datasets' and 'trainer' in the same directory
+1. Please make sure that you have folders called 'dataset' and 'trainer' in the same directory
 2. Run in the command line the face_datasets.py for taking your face image as datasets. Don't forget to set each person's face to unique ID (You need to edit the code everytime, or maybe just change the id variable to raw_input[OPTIONAL])
 3. If you have more face to be include, change the ID and run the program again
 4. Train your datasets by running training.py
@@ -29,7 +32,7 @@ This project consist of 3 parts, which are:
 ## Tips
 - If you don't understand what the code do, I already comments it line by line. 
 - You also can Google the syntax, and read the explanation from OpenCV Documentation.
-- Feel free to ask me through my email: nazmiasri95@gmail.com
+- Feel free to ask me through my email: sacha.arbonel@hotmail.fr
 
 ## Credit to:
 #### Anirban from TheCodacus. Link: http://thecodacus.com/

@@ -1,14 +1,18 @@
 ####################################################
-# Modified by Nazmi Asri                           #
+# Created by Nazmi Asri                            #
+# Modified by Sacha Arbonel                        #
 # Original code: http://thecodacus.com/            #
 # All right reserved to the respective owner       #
 ####################################################
 
+from urllib.request import urlopen
+
+from ssl import SSLContext,PROTOCOL_TLSv1
+
+import numpy as np
+
 # Import OpenCV2 for image processing
 import cv2
-
-# Start capturing video 
-vid_cam = cv2.VideoCapture(0)
 
 # Detect object in video stream using Haarcascade Frontal Face
 face_detector = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
@@ -19,11 +23,17 @@ face_id = 1
 # Initialize sample face image
 count = 0
 
+url = 'https://192.168.1.93:8080/shot.jpg'
+
 # Start looping
 while(True):
 
-    # Capture video frame
-    _, image_frame = vid_cam.read()
+    # Read the video frame from the url
+    gcontext = SSLContext(PROTOCOL_TLSv1)  # Only for gangstars
+    info = urlopen(url, context=gcontext).read()
+
+    imgNp=np.array(bytearray(info),dtype=np.uint8)
+    image_frame=cv2.imdecode(imgNp,-1)
 
     # Convert frame to grayscale
     gray = cv2.cvtColor(image_frame, cv2.COLOR_BGR2GRAY)
@@ -43,19 +53,14 @@ while(True):
         # Save the captured image into the datasets folder
         cv2.imwrite("dataset/User." + str(face_id) + '.' + str(count) + ".jpg", gray[y:y+h,x:x+w])
 
+        print(count)
         # Display the video frame, with bounded rectangle on the person's face
         cv2.imshow('frame', image_frame)
 
-    # To stop taking video, press 'q' for at least 100ms
-    if cv2.waitKey(100) & 0xFF == ord('q'):
+    k = cv2.waitKey(33)
+    if k==27:    # Esc key to stop
         break
 
     # If image taken reach 100, stop taking video
     elif count>100:
         break
-
-# Stop video
-vid_cam.release()
-
-# Close all started windows
-cv2.destroyAllWindows()
