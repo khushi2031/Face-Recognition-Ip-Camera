@@ -1,10 +1,10 @@
-# Face Recognition using Haar-Cascade Classifier, OpenCV, and Python and an Ip Camera
+# Face Recognition using Haar-Cascade Classifier, OpenCV, Python and an Ip Camera
 
 ## Requirement
 - Python 3.4+
 - OpenCV 3.1.0
 - Numpy
-- Ip Camera (I'm using the android app "IP Sebcam")
+- Ip Camera (I'm using the android app "IP Webcam")
 
 ## Install OpenCV 3.1 on Ubuntu Pyton 3.4+
 `pip install opencv-contrib-python`
