@@ -63,9 +63,9 @@ while True:
         # Check the ID if exist 
         if(Id == 3):
             Id = "Sacha"
-
+        # # Uncomment this block if you want to recognize other faces, and replace with the id provided in face_datasets
         # elif(Id == 1):
-        #     Id = "Juan"
+        #     Id = "Juan" # # Name of the other person you want to recognize
         # #If not exist, then it is Unknown
         # else:
         #     Id = "Unknown"
