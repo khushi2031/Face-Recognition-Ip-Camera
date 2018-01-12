@@ -22,6 +22,7 @@ face_id = 1
 # Initialize sample face image
 count = 0
 
+# Ip of the IP webcam server (on phone). The phone and your computer must be in the same LAN (connected to the same WiFi)
 url = 'https://192.168.1.93:8080/shot.jpg'
 
 # Start looping
