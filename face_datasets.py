@@ -1,5 +1,4 @@
 ####################################################
-# Created by Nazmi Asri                            #
 # Modified by Sacha Arbonel                        #
 # Original code: http://thecodacus.com/            #
 # All right reserved to the respective owner       #
