@@ -32,6 +32,7 @@ faceCascade = cv2.CascadeClassifier(cascadePath);
 # Set the font style
 font = cv2.FONT_HERSHEY_SIMPLEX
 
+# Ip of the IP webcam server (on phone). The phone and your computer must be in the same LAN (connected to the same WiFi)
 url = 'https://192.168.1.93:8080/shot.jpg'
 
 # Loop
