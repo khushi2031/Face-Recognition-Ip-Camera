@@ -78,5 +78,5 @@ while True:
     cv2.imshow('im',im) 
 
     # If 'q' is pressed, close program
-    if cv2.waitKey(10) & 0xFF == ord('q'):
+    if cv2.waitKey(30) & 0xFF == ord('q'):
         break
